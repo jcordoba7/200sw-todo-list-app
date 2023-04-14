@@ -70,17 +70,29 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 
 ## 6. Creación de un contenedor a partir de la imagen
 - Finalmente, creamos un contenedor a partir de la imagen generada anteriormente, el cual será accedido a través del puerto 80
-    ```
+     ```
      # Crear un contenedor basado en la imagen todo-list-image:v1
      docker run --rm -d -p 80:80 todo-list-image:v1
      ```
+    
     ### Flags: 
-    `-p 80:80` todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado.   
+    `-p 80:80`  _Todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado._   
 
-    `-d` Docker ejecutará el container en background.
+    `-d`  _Docker ejecutará el container en background._
 
-    `--rm` En caso de detener el contenedor, éste será eliminado automáticamente.
+    `--rm`  _En caso de detener el contenedor, éste será eliminado automáticamente._
 
 - Para comprobar que el contenedor se está ejecutando de manera correcta, ingresamos a algún navegador e ingresamos la siguiente URL.
     - [http://localhost](http://localhost)
 
+- Si queremos listar los contenedores que actualmente se están ejecutando usamos el siguiente comando.
+     ```
+     # Listar todos los contenedores en ejecución
+     docker ps
+     ```
+
+- Para detener un contenedor en ejecución usamos el siguiente comando.
+     ```
+     # Detener un contenedor en ejecución dado su ID
+     docker stop <CONTAINER-ID>
+     ```
