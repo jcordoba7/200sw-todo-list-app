@@ -1,5 +1,5 @@
 # Docker Containers (Ejercicio Práctico)
-Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *ToDo-List* sobre un entorno local con Docker. 
+Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _ToDo-List_ sobre un entorno local con Docker. 
 
 ## 1. Instalación de Docker en Windows
  https://docs.docker.com/desktop/install/windows-install/
@@ -9,20 +9,20 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *To
 - Ingresar al directorio descomprimido.
 - La estructura de la carpeta o workspace es la siguiente
     ```bash
-    /200sw-todo-list-app-main
-    |
-    |──/app
-       |
-       |──index.php
-       |──style.css
-    |──Dockerfile
-    |──README.md
+    |──**/200sw-todo-list-app-main**
+        |
+        |──**/app**
+            |
+            |──index.php
+            |──style.css
+        |──Dockerfile
+        |──README.md
     ```
 
 ## 3. Revisión del contenido en el workspace
 - Una vez en el directorio descomprimido, ingresar a la carpeta **/app**.
-    - En esta carpeta se encuentran los archivos relacionados al código de la aplicación ToDo-List (un archivo *.php* y un archivo *.css*).
-    - Dentro del archivo *index.php* podremos ver el html de la interfaz gráfica, y adicional, el script en php que nos permite conectarnos con una base de datos MySQL remota para así poder guardar las actividades registras en la aplicación.
+    - En esta carpeta se encuentran los archivos relacionados al código de la aplicación **ToDo-List** (un archivo _.php_ y un archivo _.css_).
+    - Dentro del archivo *index.php* podremos ver el html de la interfaz gráfica, y adicional, el script en _php_ que nos permite conectarnos con una base de datos _MySQL_ remota, para así poder guardar las actividades registras en la aplicación.
 
 ## 4. Revisión del archivo Dockerfile
 - Regresar al root de la carpeta descomprimida o workspace.
@@ -50,9 +50,11 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *To
 
 ## 5. Creación de la imagen para el contenedor
 - Abrir el programa **PowerShell** de Windows.
-- Situarse en la ubicación del root de nuestro workspace (misma ubicación del Dockerfile)
-- Con ayuda Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **todo-list-image** y la versión es **v1**:
-     `docker build -t todo-list-image:v1 .`
+- Con el comando **cd** situarse en la ubicación del root de nuestro workspace (misma ubicación del Dockerfile)
+- Con ayuda de Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **todo-list-image** y la versión es **v1**:
+     ```
+     docker build -t todo-list-image:v1 .
+     ```
 
 docker run --rm -dp 80:80 todo-app-test:v1
 
