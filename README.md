@@ -8,15 +8,16 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 - Descomprimir el archivo recién descargado **200sw-todo-list-app-main.zip** en la ubicación deseada.
 - Ingresar al directorio descomprimido.
 - La estructura de la carpeta o workspace es la siguiente
-    ```bash
-    |──**/200sw-todo-list-app-main**
-        |
-        |──**/app**
-            |
-            |──index.php
-            |──style.css
-        |──Dockerfile
-        |──README.md
+    ```tree
+    .
+    |──/200sw-todo-list-app-main
+    |    |
+    |    |──/app
+    |    |    |
+    |    |    |──index.php
+    |    |    |──style.css
+    |    |──Dockerfile
+    |    |──README.md
     ```
 
 ## 3. Revisión del contenido en el workspace
@@ -28,7 +29,8 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 - Regresar al root de la carpeta descomprimida o workspace.
 - Revisar el archivo *Dockerfile*.
     - Allí encontraremos las especificaciones para la creación de la imagen referencia para nuestro contenedor.
-        ```
+        
+        ```dockerfile
         # Declaración de la imagen base del contenedor 
         FROM php:8.0-apache
 
