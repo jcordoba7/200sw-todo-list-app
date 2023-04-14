@@ -9,14 +9,14 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *To
 - Ingresar al directorio descomprimido.
 - La estructura de la carpeta o workspace es la siguiente
     ```bash
-    200sw-todo-list-app-main
+    /200sw-todo-list-app-main
     |
-    ├──app
+    |──/app
        |
-       ├──index.php
-       ├──style.css
-    ├──Dockerfile
-    ├──README.md
+       |──index.php
+       |──style.css
+    |──Dockerfile
+    |──README.md
     ```
 
 ## 3. Revisión del contenido en el workspace
