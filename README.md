@@ -8,16 +8,17 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 - Descomprimir el archivo recién descargado **200sw-todo-list-app-main.zip** en la ubicación deseada.
 - Ingresar al directorio descomprimido.
 - La estructura de la carpeta o workspace es la siguiente
+    
     ```tree
     .
-    |──/200sw-todo-list-app-main
+    ├──/200sw-todo-list-app-main
     |    |
-    |    |──/app
+    |    ├──/app
     |    |    |
-    |    |    |──index.php
-    |    |    |──style.css
-    |    |──Dockerfile
-    |    |──README.md
+    |    |    ├──index.php
+    |    |    └──style.css
+    |    ├──Dockerfile
+    |    └──README.md
     ```
 
 ## 3. Revisión del contenido en el workspace
@@ -54,9 +55,19 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 - Abrir el programa **PowerShell** de Windows.
 - Con el comando **cd** situarse en la ubicación del root de nuestro workspace (misma ubicación del Dockerfile)
 - Con ayuda de Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **todo-list-image** y la versión es **v1**:
-     ```
+     
+     ```docker
      docker build -t todo-list-image:v1 .
      ```
+
+- Si deseamos confirmar la creación de la imagen, podemos utilizar el siguiente comando para ver el listado de images creadas.
+
+     ```docker
+     docker images
+     ```
+
+## 6. Creación de un contenedor a partir de la imagen
+
 
 docker run --rm -dp 80:80 todo-app-test:v1
 
