@@ -56,23 +56,32 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 - Con el comando **cd** situarse en la ubicación del root de nuestro workspace (misma ubicación del Dockerfile)
 - Con ayuda de Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **todo-list-image** y la versión es **v1**:
      
-     ```docker
+     ```
+     # Construir una imagen a partir del Dockerfile
      docker build -t todo-list-image:v1 .
      ```
 
 - Si deseamos confirmar la creación de la imagen, podemos utilizar el siguiente comando para ver el listado de images creadas.
 
-     ```docker
+     ```
+     # Listar todas las imagenes
      docker images
      ```
 
 ## 6. Creación de un contenedor a partir de la imagen
+- Finalmente, creamos un contenedor a partir de la imagen generada anteriormente, el cual será accedido a través del puerto 80
+    ```
+     # Crear un contenedor basado en la imagen todo-list-image:v1
+     docker run --rm -d -p 80:80 todo-list-image:v1
+     ```
 
+### Flags: 
+`-p 80:80` todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado.   
 
-docker run --rm -dp 80:80 todo-app-test:v1
+`-d` Docker ejecutará el container en background.
 
-docker login phx.ocir.io
+`--rm` En caso de detener el contenedor, éste será eliminado automáticamente.
 
-docker tag todo-app-test:v1 phx.ocir.io/idch4uyl2yza/ce-jcc/todo-app:v2
+- Para comprobar que el contenedor se está ejecutando de manera correcta, ingresamos a algún navegador e ingresamos la siguiente URL.
+[http://localhost](http://localhost)
 
-docker push phx.ocir.io/idch4uyl2yza/ce-jcc/todo-app:v2
