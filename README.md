@@ -37,7 +37,9 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *To
         EXPOSE 80
         ```
 
-docker build -t todo-app-test:v1 .
+## 5. Creación de la imagen para el contenedor
+- Con ayuda Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **_todo-list-image_** y la versión es **_v1_**:
+     ```docker build -t todo-list-image:v1 .
 
 docker run --rm -dp 80:80 todo-app-test:v1
 
