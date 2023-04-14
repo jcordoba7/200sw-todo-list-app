@@ -53,7 +53,7 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 
 ## 5. Creación de la imagen para el contenedor
 - Abrir el programa **PowerShell** de Windows.
-- Con el comando **cd** situarse en la ubicación del root de nuestro workspace (misma ubicación del Dockerfile)
+- Con el comando **cd** situarse en la ubicación del root de nuestro workspace (misma ubicación del archivo Dockerfile)
 - Con ayuda de Docker, creamos nuestra primera versión de la imagen de la aplicación *ToDo-List*. La imagen se llamará **todo-list-image** y la versión es **v1**:
      
      ```
@@ -69,7 +69,8 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
      ```
 
 ## 6. Creación de un contenedor a partir de la imagen
-- Finalmente, creamos un contenedor a partir de la imagen generada anteriormente, el cual será accedido a través del puerto 80
+- Finalmente, creamos un contenedor a partir de la imagen generada anteriormente, el cual será accedido a través del puerto 80.
+
      ```
      # Crear un contenedor basado en la imagen todo-list-image:v1
      docker run --rm -d -p 80:80 todo-list-image:v1
@@ -82,16 +83,18 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
 
     `--rm`  _En caso de detener el contenedor, éste será eliminado automáticamente._
 
-- Para comprobar que el contenedor se está ejecutando de manera correcta, ingresamos a algún navegador e ingresamos la siguiente URL.
+- Para comprobar que el contenedor se está ejecutando de manera correcta, accedemos a algún navegador e ingresamos la siguiente URL.
     - [http://localhost](http://localhost)
 
 - Si queremos listar los contenedores que actualmente se están ejecutando usamos el siguiente comando.
+
      ```
      # Listar todos los contenedores en ejecución
      docker ps
      ```
 
 - Para detener un contenedor en ejecución usamos el siguiente comando.
+
      ```
      # Detener un contenedor en ejecución dado su ID
      docker stop <CONTAINER-ID>
