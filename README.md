@@ -1,19 +1,19 @@
-## Docker Containers (Ejercicio Práctico)
+# Docker Containers (Ejercicio Práctico)
 Este ejercicio consiste en el despliegue **contenerizado** de la aplicación *ToDo-List* sobre un entorno local con Docker. 
 
-### 1. Instalación de Docker en Windows
+## 1. Instalación de Docker en Windows
  https://docs.docker.com/desktop/install/windows-install/
 
-### 2. Creación del Workspace de trabajo
+## 2. Creación del Workspace de trabajo
 - Descomprimir el archivo **200sw-todo-list-app-main.zip** en la ubicación deseada.
 - Ingresar al directorio descomprimido.
 
-### 3. Revisión del contenido en el workspace
+## 3. Revisión del contenido en el workspace
 - Una vez en el directorio descomprimido, ingresar a la carpeta **app**.
     - En esta carpeta se encuentran los archivos relacionados al código de la aplicación ToDo-List (un archivo *.php* y un archivo *.css*).
     - Dentro del archivo *index.php* podremos ver el html de la interfaz gráfica, y adicional, el script en php que nos permite conectarnos con una base de datos MySql remota para así poder guardar las actividades registras en la aplicación.
 
-### 4. Revisión del archivo Dockerfile
+## 4. Revisión del archivo Dockerfile
 - Regresar al root de la carpeta descomprimida o workspace.
 - Revisar el archivo *Dockerfile*.
     - Allí encontraremos las especificaciones para la creación de la imagen referencia para nuestro contenedor.
