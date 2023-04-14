@@ -74,7 +74,6 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
      # Crear un contenedor basado en la imagen todo-list-image:v1
      docker run --rm -d -p 80:80 todo-list-image:v1
      ```
-
     ### Flags: 
     `-p 80:80` todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado.   
 
