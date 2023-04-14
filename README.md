@@ -75,12 +75,12 @@ Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _To
      docker run --rm -d -p 80:80 todo-list-image:v1
      ```
 
->### Flags: 
->`-p 80:80` todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado.   
+    ### Flags: 
+    `-p 80:80` todo el tráfico recibido por el puerto 80 de la máquina local, será redirigido al puerto 80 del contenedor creado.   
 
->`-d` Docker ejecutará el container en background.
+    `-d` Docker ejecutará el container en background.
 
->`--rm` En caso de detener el contenedor, éste será eliminado automáticamente.
+    `--rm` En caso de detener el contenedor, éste será eliminado automáticamente.
 
 - Para comprobar que el contenedor se está ejecutando de manera correcta, ingresamos a algún navegador e ingresamos la siguiente URL.
     - [http://localhost](http://localhost)
