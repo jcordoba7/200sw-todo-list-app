@@ -1,5 +1,5 @@
 # Docker Containers (Ejercicio Práctico)
-Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _ToDo-List_ sobre un entorno local con Docker. 
+Este ejercicio consiste en el despliegue **contenerizado** de la aplicación _ToDo-List_ sobre un entorno local con Docker (en Windows). 
 
 ## 1. Instalación de Docker en Windows
  https://docs.docker.com/desktop/install/windows-install/
